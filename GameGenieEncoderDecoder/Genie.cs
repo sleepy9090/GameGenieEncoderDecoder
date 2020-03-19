@@ -675,8 +675,61 @@ namespace GameGenieEncoderDecoder
 
         #region GameBoy / GameGear
 
+        public string DecryptGbGgCodeToAddressAndValue(string codeString)
+        {
+            string decryptedString;
+            string value = codeString.Substring(0, 2);
+            string firstDigitValue = codeString[5].ToString();
+            int firstDigitInt = Convert.ToInt32(firstDigitValue, 16);
+            int xoringValue = Convert.ToInt32("F", 16); // XOR 0xF of 0xF000
+            int xoredFirstDigit = firstDigitInt ^ xoringValue;
+            string firstDigit = xoredFirstDigit.ToString("X").PadLeft(1, '0');
+            string address = firstDigit.ToString() + codeString.Substring(2,3);
+            decryptedString = address.ToString() + value.ToString();
 
+            if (codeString.Length == 9)
+            {
+                string hexValue = codeString[6].ToString() + codeString[8].ToString();
+                string binValue = Convert.ToString(Convert.ToInt32(hexValue, 16), 2).PadLeft(8, '0'); ;
+                string binValueRotated = binValue[6].ToString() + binValue[7].ToString() + binValue.Substring(0,6);
+                int hexInt = Convert.ToInt32(binValueRotated, 2);
+                int xorResult = hexInt ^ 0xBA;
+                string checkByteCompare = xorResult.ToString("X").PadLeft(2, '0');
+                decryptedString += checkByteCompare.ToString();
+            }
 
+            return decryptedString;
+        }
+
+        public string EncryptGbGgAddressAndValueToCode(string hexString)
+        {
+            // address, value, checkbyte -> FCDE-AB-GI -> ABC-DEF-[GHI]
+            string encryptedString = "";
+
+            string value = hexString.Substring(4, 2);
+
+            string fifthDigitValue = hexString[0].ToString();
+            int fifthDigitInt = Convert.ToInt32(fifthDigitValue, 16);
+            int xoringValue = Convert.ToInt32("F", 16); // XOR 0xF of 0xF000
+            int xoredFifthtDigit = fifthDigitInt ^ xoringValue;
+            string fifthDigit = xoredFifthtDigit.ToString("X").PadLeft(1, '0');
+            string address = fifthDigit.ToString() + hexString.Substring(1, 3);
+            encryptedString = address.ToString() + value.ToString();
+
+            if (hexString.Length == 8)
+            {
+                // @todo: fix order
+                string hexValue = hexString[6].ToString() + hexString[8].ToString();
+                string binValue = Convert.ToString(Convert.ToInt32(hexValue, 16), 2).PadLeft(8, '0'); ;
+                string binValueRotated = binValue.Substring(2, 6) + binValue[0].ToString() + binValue[1].ToString();
+                int hexInt = Convert.ToInt32(binValueRotated, 2);
+                int xorResult = hexInt ^ 0xBA;
+                string checkByteCompare = xorResult.ToString("X").PadLeft(2, '0');
+                encryptedString += checkByteCompare.ToString();
+            }
+
+            return encryptedString;
+        }
         #endregion
 
     }

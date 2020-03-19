@@ -12,6 +12,8 @@ namespace GameGenieEncoderDecoder
 {
     public partial class Form1 : Form
     {
+        private readonly char[] _GG_GB_VALID_CHARS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
         public Form1()
         {
             InitializeComponent();
@@ -29,12 +31,47 @@ namespace GameGenieEncoderDecoder
 
         private void buttonGbGgEncode_Click(object sender, EventArgs e)
         {
+            string address = textBoxGbGgAddress.Text;
+            string value = textBoxGbGgValue.Text;
+            string checkByteCompare = textBoxGbGgCheckByteCompare.Text;
 
+            string raw = value + address + checkByteCompare;
+            if (raw.Length != 6 && raw.Length != 8)
+            {
+                MessageBox.Show(@"Address must be 6 characters and value must be 2 characters (compare is optional 2 chars), 0-9, A-F", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                Genie genie = new Genie();
+                string code = genie.EncryptGbGgAddressAndValueToCode(raw);
+                textBoxSnesCode.Text = code;
+            }
         }
 
         private void buttonGbGgDecode_Click(object sender, EventArgs e)
         {
+            string code = textBoxGbGgCode.Text.ToUpper();
+            if (code.Length != 9 && code.Length != 6)
+            {
+                MessageBox.Show(@"Code must be 6 or 9 characters, 0-9, A-F.", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                Genie genie = new Genie();
+                string decoded = genie.DecryptGbGgCodeToAddressAndValue(code).ToUpper();
+                string decodedAddress = decoded.Substring(0, 4);
+                string decodedValue = decoded.Substring(4, 2);
+                textBoxGbGgAddress.Text = decodedAddress;
+                textBoxGbGgValue.Text = decodedValue;
 
+                if (code.Length == 9)
+                {
+                    string decodedCheckByteCompare = decoded.Substring(6, 2);
+                    textBoxGbGgCheckByteCompare.Text = decodedCheckByteCompare;
+                }
+            }
         }
 
         private void buttonSnesEncode_Click(object sender, EventArgs e)

@@ -30,19 +30,17 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBoxNesCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNesAddress = new System.Windows.Forms.TextBox();
-            this.textBoxNesValue = new System.Windows.Forms.TextBox();
-            this.textBoxNesCheckByteCompare = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonNesEncode = new System.Windows.Forms.Button();
             this.buttonNesDecode = new System.Windows.Forms.Button();
+            this.buttonNesEncode = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxNesCheckByteCompare = new System.Windows.Forms.TextBox();
+            this.textBoxNesValue = new System.Windows.Forms.TextBox();
+            this.textBoxNesAddress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNesCode = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonGbGgDecode = new System.Windows.Forms.Button();
             this.buttonGbGgEncode = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,6 +51,7 @@
             this.textBoxGbGgAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxGbGgCode = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonSnesDecode = new System.Windows.Forms.Button();
             this.buttonSnesEncode = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.textBoxSnesAddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxSnesCode = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.buttonGenMdDecode = new System.Windows.Forms.Button();
             this.buttonGenMdEncode = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -108,6 +108,90 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "NES";
             // 
+            // buttonNesDecode
+            // 
+            this.buttonNesDecode.Location = new System.Drawing.Point(156, 119);
+            this.buttonNesDecode.Name = "buttonNesDecode";
+            this.buttonNesDecode.Size = new System.Drawing.Size(75, 23);
+            this.buttonNesDecode.TabIndex = 9;
+            this.buttonNesDecode.Text = "&Decode";
+            this.buttonNesDecode.UseVisualStyleBackColor = true;
+            this.buttonNesDecode.Click += new System.EventHandler(this.buttonNesDecode_Click);
+            // 
+            // buttonNesEncode
+            // 
+            this.buttonNesEncode.Location = new System.Drawing.Point(75, 119);
+            this.buttonNesEncode.Name = "buttonNesEncode";
+            this.buttonNesEncode.Size = new System.Drawing.Size(75, 23);
+            this.buttonNesEncode.TabIndex = 8;
+            this.buttonNesEncode.Text = "&Encode";
+            this.buttonNesEncode.UseVisualStyleBackColor = true;
+            this.buttonNesEncode.Click += new System.EventHandler(this.buttonNesEncode_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Check Byte / Compare:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Value:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Address:";
+            // 
+            // textBoxNesCheckByteCompare
+            // 
+            this.textBoxNesCheckByteCompare.Location = new System.Drawing.Point(130, 93);
+            this.textBoxNesCheckByteCompare.Name = "textBoxNesCheckByteCompare";
+            this.textBoxNesCheckByteCompare.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNesCheckByteCompare.TabIndex = 4;
+            // 
+            // textBoxNesValue
+            // 
+            this.textBoxNesValue.Location = new System.Drawing.Point(130, 67);
+            this.textBoxNesValue.Name = "textBoxNesValue";
+            this.textBoxNesValue.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNesValue.TabIndex = 3;
+            // 
+            // textBoxNesAddress
+            // 
+            this.textBoxNesAddress.Location = new System.Drawing.Point(130, 41);
+            this.textBoxNesAddress.Name = "textBoxNesAddress";
+            this.textBoxNesAddress.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNesAddress.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Code:";
+            // 
+            // textBoxNesCode
+            // 
+            this.textBoxNesCode.Location = new System.Drawing.Point(130, 15);
+            this.textBoxNesCode.Name = "textBoxNesCode";
+            this.textBoxNesCode.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNesCode.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
@@ -128,129 +212,9 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "GB/GG";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage3.Controls.Add(this.buttonSnesDecode);
-            this.tabPage3.Controls.Add(this.buttonSnesEncode);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.textBoxSnesValue);
-            this.tabPage3.Controls.Add(this.textBoxSnesAddress);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.textBoxSnesCode);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(768, 409);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "SNES";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage4.Controls.Add(this.buttonGenMdDecode);
-            this.tabPage4.Controls.Add(this.buttonGenMdEncode);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.textBoxGenMdValue);
-            this.tabPage4.Controls.Add(this.textBoxGenMdAddress);
-            this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.textBoxGenMdCode);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(768, 409);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "GEN/MD";
-            // 
-            // textBoxNesCode
-            // 
-            this.textBoxNesCode.Location = new System.Drawing.Point(130, 15);
-            this.textBoxNesCode.Name = "textBoxNesCode";
-            this.textBoxNesCode.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNesCode.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Code:";
-            // 
-            // textBoxNesAddress
-            // 
-            this.textBoxNesAddress.Location = new System.Drawing.Point(130, 41);
-            this.textBoxNesAddress.Name = "textBoxNesAddress";
-            this.textBoxNesAddress.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNesAddress.TabIndex = 2;
-            // 
-            // textBoxNesValue
-            // 
-            this.textBoxNesValue.Location = new System.Drawing.Point(130, 67);
-            this.textBoxNesValue.Name = "textBoxNesValue";
-            this.textBoxNesValue.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNesValue.TabIndex = 3;
-            // 
-            // textBoxNesCheckByteCompare
-            // 
-            this.textBoxNesCheckByteCompare.Location = new System.Drawing.Point(130, 93);
-            this.textBoxNesCheckByteCompare.Name = "textBoxNesCheckByteCompare";
-            this.textBoxNesCheckByteCompare.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNesCheckByteCompare.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Address:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Value:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Check Byte / Compare:";
-            // 
-            // buttonNesEncode
-            // 
-            this.buttonNesEncode.Location = new System.Drawing.Point(75, 119);
-            this.buttonNesEncode.Name = "buttonNesEncode";
-            this.buttonNesEncode.Size = new System.Drawing.Size(75, 23);
-            this.buttonNesEncode.TabIndex = 8;
-            this.buttonNesEncode.Text = "&Encode";
-            this.buttonNesEncode.UseVisualStyleBackColor = true;
-            this.buttonNesEncode.Click += new System.EventHandler(this.buttonNesEncode_Click);
-            // 
-            // buttonNesDecode
-            // 
-            this.buttonNesDecode.Location = new System.Drawing.Point(156, 119);
-            this.buttonNesDecode.Name = "buttonNesDecode";
-            this.buttonNesDecode.Size = new System.Drawing.Size(75, 23);
-            this.buttonNesDecode.TabIndex = 9;
-            this.buttonNesDecode.Text = "&Decode";
-            this.buttonNesDecode.UseVisualStyleBackColor = true;
-            this.buttonNesDecode.Click += new System.EventHandler(this.buttonNesDecode_Click);
-            // 
             // buttonGbGgDecode
             // 
-            this.buttonGbGgDecode.Location = new System.Drawing.Point(155, 119);
+            this.buttonGbGgDecode.Location = new System.Drawing.Point(156, 119);
             this.buttonGbGgDecode.Name = "buttonGbGgDecode";
             this.buttonGbGgDecode.Size = new System.Drawing.Size(75, 23);
             this.buttonGbGgDecode.TabIndex = 19;
@@ -260,7 +224,7 @@
             // 
             // buttonGbGgEncode
             // 
-            this.buttonGbGgEncode.Location = new System.Drawing.Point(74, 119);
+            this.buttonGbGgEncode.Location = new System.Drawing.Point(75, 119);
             this.buttonGbGgEncode.Name = "buttonGbGgEncode";
             this.buttonGbGgEncode.Size = new System.Drawing.Size(75, 23);
             this.buttonGbGgEncode.TabIndex = 18;
@@ -332,6 +296,24 @@
             this.textBoxGbGgCode.Size = new System.Drawing.Size(100, 20);
             this.textBoxGbGgCode.TabIndex = 10;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage3.Controls.Add(this.buttonSnesDecode);
+            this.tabPage3.Controls.Add(this.buttonSnesEncode);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.textBoxSnesValue);
+            this.tabPage3.Controls.Add(this.textBoxSnesAddress);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.textBoxSnesCode);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(768, 409);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "SNES";
+            // 
             // buttonSnesDecode
             // 
             this.buttonSnesDecode.Location = new System.Drawing.Point(155, 93);
@@ -399,6 +381,24 @@
             this.textBoxSnesCode.Name = "textBoxSnesCode";
             this.textBoxSnesCode.Size = new System.Drawing.Size(100, 20);
             this.textBoxSnesCode.TabIndex = 10;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage4.Controls.Add(this.buttonGenMdDecode);
+            this.tabPage4.Controls.Add(this.buttonGenMdEncode);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.textBoxGenMdValue);
+            this.tabPage4.Controls.Add(this.textBoxGenMdAddress);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.textBoxGenMdCode);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(768, 409);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "GEN/MD";
             // 
             // buttonGenMdDecode
             // 
