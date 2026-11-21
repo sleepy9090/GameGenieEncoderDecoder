@@ -8,3 +8,13 @@ C:\workspace_sandbox\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\G
 C:\workspace_sandbox\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.csproj.CoreCompileInputs.cache
 C:\workspace_sandbox\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.exe
 C:\workspace_sandbox\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.pdb
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\bin\Debug\GameGenieEncoderDecoder.exe.config
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\bin\Debug\GameGenieEncoderDecoder.exe
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\bin\Debug\GameGenieEncoderDecoder.pdb
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.Form1.resources
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.Properties.Resources.resources
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.exe
+C:\Users\Administrator\source\repos\GameGenieEncoderDecoder\GameGenieEncoderDecoder\obj\Debug\GameGenieEncoderDecoder.pdb
